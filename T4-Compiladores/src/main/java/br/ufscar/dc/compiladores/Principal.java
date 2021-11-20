@@ -38,12 +38,25 @@ public class Principal {
             MedSemantico sem = new MedSemantico();
             sem.visitReceita(arvore); // Comeca visitando pelo no mais acima
             
+            // Printa todos os erros semanticos encontrados.
+            if(!MedSemantico.errosSemanticos.isEmpty()){ // Caso ocorra erro semantico.
+                for(var s: MedSemantico.errosSemanticos){
+                    myWriter.write(s);
+                }
+                myWriter.write("Fim da compilacao\n");
+            }
+            else{ // Caso nenhum erro ocorra, gerar codigo intermediario em C.
+                MedGerador gerador = new MedGerador();
+                gerador.visitReceita(arvore);
+                myWriter.write(gerador.saida.toString());
+            }
+            
 
         } catch (ParseCancellationException e) {
-            System.out.println("Erro Principal Recebido!");
             myWriter.write(e.getMessage());
+            myWriter.write("Fim da compilacao\n");
         }
-        myWriter.write("Fim da compilacao\n");
+        
         myWriter.close();
     }
 
