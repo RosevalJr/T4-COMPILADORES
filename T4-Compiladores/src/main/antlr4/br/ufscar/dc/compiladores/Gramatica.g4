@@ -2,7 +2,7 @@ grammar Gramatica;
 
 PALAVRA_CHAVE: 'inicio_receita:' | 'fim_receita';
 
-CAMPO: 'nome_medico:' | 'rua_medico:' | 'numero_meico:' | 'bairro_medico:' |
+CAMPO: 'nome_medico:' | 'rua_medico:' | 'numero_medico:' | 'bairro_medico:' |
 'cidade_medico:' | 'estado_medico:' | 'telefone_medico:' | 'nome_paciente:' |
 'rua_paciente:' | 'numero_paciente:' | 'cidade_paciente:' | 'estado_paciente:' |
 'nome_remedio:' | 'dosagem:' | 'numero_comprimidos:' | 'numero_caixas:' | 
