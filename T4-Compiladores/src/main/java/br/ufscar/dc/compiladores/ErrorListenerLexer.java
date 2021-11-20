@@ -13,8 +13,10 @@ public class ErrorListenerLexer extends BaseErrorListener {
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol,
             int line, int charPositionLine, String msg, RecognitionException e)
             throws ParseCancellationException{
+        
+        System.out.println("Uga");
         String[] tokens = msg.split("\'"); // tokens[1] contem o simbolo que causou o erro
-
+        
         // 3 erros sao detectados, token invalido, comentario nao fechado e cadeia nao fechada.
         if(tokens[1].charAt(0) == '{' && tokens[1].charAt(tokens[1].length()-1) != '}'){
             throw new ParseCancellationException("Linha " + line + ":" + " comentario nao fechado" + "\n");

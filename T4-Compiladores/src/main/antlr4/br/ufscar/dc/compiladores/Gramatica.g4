@@ -9,10 +9,16 @@ CAMPO: 'nome_medico:' | 'rua_medico:' | 'numero_medico:' | 'bairro_medico:' |
 'prescricao_qtde:' | 'prescricao_horas:' | 'prescricao_dias:' | 'data:'| 
 'assinatura:';
 
+/* Cadeia de caracteres, eh tudo aquilo entre dentre aspas, exceto por quebra 
+de linha, \r e a própria aspas */
 CADEIA: '"' (~('\n' | '\r' | '"'))* '"';
 
+
+// Comentario eh tudo aquilo dentre chaves, com exceçoes analogas as da CADEIA.
+// Todo COMENTARIO sera ignorado (função do -> skip)
 COMENTARIO: '{' (~('}' | '\n' | '\r'))* '}' -> skip;
 
+// Ignorando whitespaces (espaco, quebra de linha, tab, \r)
 WS: (' ' | '\t' | '\r' | '\n' ) -> skip;
 
 receita: 'inicio_receita' corpo 'fim_receita';

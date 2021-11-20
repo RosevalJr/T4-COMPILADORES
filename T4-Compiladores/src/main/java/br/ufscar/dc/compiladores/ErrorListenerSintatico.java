@@ -1,4 +1,4 @@
-package br.ufscar.dc.compiladores.la.sintatico;
+package br.ufscar.dc.compiladores;
 
 
 import java.util.BitSet;
@@ -37,6 +37,7 @@ public class ErrorListenerSintatico implements ANTLRErrorListener {
         // Erro que envolve EOF e retornado como "<EOF>", necessario retirar
         // o "<" e ">".
         if(t.getText().equals("<EOF>")){
+            System.out.println(t.getText());
             StringBuffer simbolo = new StringBuffer(t.getText());
         // Deleta ultima caracter
             simbolo.delete(t.getText().length() - 1, t.getText().length());
