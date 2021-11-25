@@ -6,7 +6,7 @@ public class MedGerador extends GramaticaBaseVisitor<Void> {
     @Override
     public Void visitReceita(GramaticaParser.ReceitaContext ctx) { // (procedimento nao tem retorno? necessario checar função?)
        
-        System.out.println("Entrei na arvore !");
+        System.out.println("Entrei na arvore - Gerador !");
         return super.visitReceita(ctx);  // visita os filhos.
     }
  

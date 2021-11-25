@@ -23,9 +23,7 @@ public class Principal {
         try {
             lex.removeErrorListeners();
             lex.addErrorListener(ErrorListenerLexer.INSTANCE);
-            
             CommonTokenStream tokens = new CommonTokenStream(lex);
-            
             
             GramaticaParser parser = new GramaticaParser(tokens);
             
