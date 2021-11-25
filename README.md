@@ -1,5 +1,10 @@
 # Linguagem para geração de receitas médicas
 
+## Autores
+Roseval Donisete Malaquias Junior - 758597
+Nathan Celestino de Oliveira - 758601
+Yuri Gabriel Aragão da Silva - 758608
+
 ## Descrição
 Esta linguagem foi criada com o intuito de facilitar a geração de um receituário médico que contém informações do médico,
 informações do paciente e uma lista de remédios com os detalhes de sua prescrição.
