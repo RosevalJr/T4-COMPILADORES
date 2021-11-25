@@ -25,6 +25,9 @@ CAMPO_ASSINATURA: 'assinatura';
 // Apenas um true ou false
 CAMPO_DATA: 'data';
 
+// Definicao de numero inteiro.
+NUM_INT: ('0'..'9')+;
+
 /* Cadeia de caracteres, eh tudo aquilo entre dentre aspas, exceto por quebra 
 de linha, \r e a própria aspas */
 CADEIA: '"' (~('\n' | '\r' | '"'))* '"';
@@ -46,7 +49,7 @@ SEPARADOR: '||';
 
 // Define a estrutura da receita
 receita: 'inicio_receita' medico paciente remedios recomendacoes
-assinatura data 'fim_receita';
+assinatura ?(data) 'fim_receita';
 
 // Informacoes do medico
 medico: nomeMedico ruaMedico numeroMedico bairroMedico cidadeMedico estadoMedico
@@ -69,18 +72,18 @@ recomendacoes: recomendacao (SEPARADOR recomendacao)*;
 // Definindo campos do medico... (Semanticamente havera tipagem e formatacao)
 nomeMedico: 'nome_medico' DELIM CADEIA;
 ruaMedico: 'rua_medico' DELIM CADEIA;
-numeroMedico: 'numero_medico' DELIM CADEIA;
+numeroMedico: 'numero_medico' DELIM NUM_INT;
 bairroMedico: 'bairro_medico' DELIM CADEIA;
 cidadeMedico: 'cidade_medico' DELIM CADEIA;
 estadoMedico: 'estado_medico' DELIM CADEIA;
 telefoneMedico: 'telefone_medico' DELIM CADEIA;
-crmMedico: 'crm_medico' DELIM CADEIA;
+crmMedico: 'crm_medico' DELIM NUM_INT;
 
 // Definindo campos do paciente... (Semanticamente havera tipagem e formatacao
 // (mascara) e restricoes de tamanho)
 nomePaciente: 'nome_paciente' DELIM CADEIA;
 ruaPaciente: 'rua_paciente' DELIM CADEIA;
-numeroPaciente: 'numero_paciente' DELIM CADEIA;
+numeroPaciente: 'numero_paciente' DELIM NUM_INT;
 cidadePaciente: 'cidade_paciente' DELIM CADEIA; 
 estadoPaciente: 'estado_paciente' DELIM CADEIA;
 
@@ -104,4 +107,4 @@ assinatura: 'assinatura' DELIM CADEIA;
 
 // Definindo campos da data... (GERADA AUTOMATICAMENTE, entao semanticamente 
 // CADEIA é booleano).
-data: 'data' ':' CADEIA;
+data: 'data' DELIM CADEIA;
