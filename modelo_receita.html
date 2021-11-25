@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Receita</title>
+</head>
+<body>
+
+<style>
+    #anverso {
+        width: 60%;
+        height: 80%;
+        margin: 50px 100px 50px 100px;
+        border-style: double;
+        border-color: #00ace6;
+        border-width: 7px;
+        border-radius: 25px;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+    }
+    body {
+        color: #002266;
+        background-color: #d9d9d9;
+    }
+
+    #medico, #paciente, #remedio, #data {
+        margin: 0 0 70px 0;
+    }
+    #logo{
+        width: 50px;
+        height:50px;
+    }
+
+    hr{
+        width: 50%;
+        color: #002266;
+    }
+
+</style>
+
+<table>
+    <tr>
+        <td><img id="logo" src="medicina.png"></td>
+        <td><h1>RECEITUÁRIO</h1></td>
+    </tr>
+</table>
+<div id="anverso">
+
+    <div id="medico">
+        <div class="campo">Dr Hipócrates da Grécia</div>
+        <div class="campo">Av. Epitácio Pessoa 453, Centro</div>
+        <div class="campo">João Pessoa, Paraíba</div>
+        <div class="campo">Telefone (83) 3224 0978</div>
+        <div class="campo">CRM PB 0000</div>
+    </div>
+    <div id="paciente">
+        <div class="campo">Maria Fulana da Silva</div>
+        <div class="campo">João Lagoa da Silva, 35</div>
+        <div class="campo">João Pessoa, Paraíba</div>
+    </div>    
+
+
+    <div id="remedio">
+        <div class="campo">Amoxilina 500 mg, 10 comprimidos</div>
+        <div class="campo">1 comprimido por dia</div>
+    </div>
+
+    <center>
+        <div id="data">
+            João Pessoa, 21 março de 2019
+        </div>
+
+        <hr/>
+
+        <div id="assinatura">
+            Assinatura do profissional
+        </div>
+    </center>
+
+</div>
+<div id="verso"></div>
+
+</body>
+</html> 
