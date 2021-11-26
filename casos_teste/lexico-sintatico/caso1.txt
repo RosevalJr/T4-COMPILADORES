@@ -2,7 +2,7 @@ inicio_receita
 
 nome_medico : "Pedro da silva"
 rua_medico : "Avenida Afonso Pena"
-numero_medico : "600"
+numero_medico : 600
 bairro_medico : "Boa Viagem"
 cidade_medico : "Belo Horizonte"
 estado_medico : "Minas Gerais"

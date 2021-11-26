@@ -20,9 +20,9 @@ nome_remedio : Amoxilina
 dosagem : 500 mg
 numero_comprimidos : 10
 numero_caixas : 1
-prescricao_qtde : 1 comprimido
-prescricao_horas : 24 horas
-prescricao_dias : 10 dias
+prescricao_qtde : 1
+prescricao_horas : 24
+prescricao_dias : 10
 
 recomendacao: Ficar de repouso
 
