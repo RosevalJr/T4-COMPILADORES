@@ -13,7 +13,7 @@ Este compilador efetua a análise léxica e sintática de acordo com a gramátic
 que efetua as seguintes checagens:
 
 * Um mesmo remédio não pode ser repetido;
-* Existem campos que possuem um limite maximo e minimo de caracteres;
+* Existem campos que possuem um limite máximo e mínimo de caracteres;
 * Existem campos que necessitam de uma formatação (máscara) específica (telefone_medico).
 
 ---
@@ -29,7 +29,7 @@ que efetua as seguintes checagens:
 
 Essa linguagem foi produzida com o intuito de facilitar a geração de receitas médicas online. O usuário da linguagem deve produzir um arquivo .txt seguindo as regras especificadas pela gramática produzida, inserindo as informações que irão aparecer na receita. Diante disso, deve então ser seguido um modelo para a produção deste arquivo de entrada.
 
-Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_receita`` e ``fim_receita``. Todas as informações da receita serão adicionas entre esstes dois identificados. Depois para cada um dos campos será necessario inserir ``"nome do campo" : "valor"``, seguindo a ordem especificada pela gramática. Dessa forma, também foram especificados o que devem ser inserido em cada campo, seguindo algumas regras definida pelos autores da linguagem:
+Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_receita`` e ``fim_receita``. Todas as informações da receita serão adicionadas entre estes dois identificadores. Depois, para cada um dos campos será necessário inserir ``"nome do campo" : "valor"``, seguindo a ordem especificada pela gramática. Também foram especificados o que devem ser inserido em cada campo, seguindo algumas regras definida pelos autores da linguagem:
 
 
 - nome_medico : Qualquer cadeia de caracteres
@@ -39,7 +39,7 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 - cidade_medico : Qualquer cadeia de caracteres
 - estado_medico : Qualquer cadeia de caracteres
 - telefone_medico : **Seguir a máscara (00 0000-0000)**
-- crm_medico: : **até 10 digitos numéricos**
+- crm_medico: : **No máximo 10 digitos numéricos**
 
 - nome_paciente : Qualquer cadeia de caracteres
 - rua_paciente : Qualquer cadeia de caracteres
@@ -59,7 +59,7 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 
 - assinatura: **Qualquer cadeia de caracteres com até 90 caracteres**
 
-- data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data atual)**
+- data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja especificado o compilador gera a receita com a data atual)**
 
 Diante disso,
 
@@ -78,3 +78,4 @@ Importante destacar que, o ``[arquivo-de-entrada]`` deve ser um arquivo texto e 
 ```
 $ java -jar T4-Compiladores-1.0-SNAPSHOT-jar-with-dependencies.jar /home/nathan/ufscar/T4-COMPILADORES/casos_teste/lexico-sintatico/caso1.txt /home/nathan/ufscar/T4-COMPILADORES/modelo_receita.html
 ```
+
