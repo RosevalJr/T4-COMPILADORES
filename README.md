@@ -13,7 +13,7 @@ Este compilador efetua a análise léxica e sintática de acordo com a gramátic
 que efetua as seguintes checagens:
 
 * Um mesmo remédio não pode ser repetido
-* A data é uma informação não-obrigatória
+* A data é uma informação não-obrigatória. Caso não for providenciada, a receita ficará com a data do dia em que for gerada
 * Existem valores que necessitam de uma formatação (máscara) específica, como o telefone
 
 O compilador foi implementado utilizando a linguagem Java através da biblioteca ANTLR4, com base nos conhecimentos adquiridos na disciplina.
