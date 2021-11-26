@@ -19,9 +19,10 @@ que efetua as seguintes checagens:
 ---
 ## Dependências
 
-* ANTLR 4.7.1
+* ANTLR 4.7.2
 * Maven 8
-* JDK 11.11.11
+* JDK 11.0.12
+* Apache Netbeans 12.5
 
 ---
 ## Como Utilizar a Linguagem
@@ -54,9 +55,9 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 - prescricao_horas : Qualquer numero inteiro
 - prescricao_dias : Qualquer numero inteiro
 
-- recomendacao: Qualquer cadeia de caracteres com até 200 caracteres
+- recomendacao: **Qualquer cadeia de caracteres com até 200 caracteres**
 
-- assinatura: Qualquer cadeia de caracteres com até 90 caracteres
+- assinatura: **Qualquer cadeia de caracteres com até 90 caracteres**
 
 - data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data atual)**
 
@@ -75,5 +76,5 @@ $ java -jar T4-Compiladores-1.0-SNAPSHOT-jar-with-dependencies.jar [arquivo-de-e
 Importante destacar que, o ``[arquivo-de-entrada]`` deve ser um arquivo texto e o ``[arquivo-de-saida]`` deve ser especificado com a extensão ``.html`` para que a receita possa ser visualizada dentro do navegador, abrindo o arquivo. Além disso, tanto ``[arquivo-de-entrada]``, quanto ``[arquivo-de-saida]`` devem ser caminhos absolutos. Um exemplo de execução do compilador seria através do comando:
 
 ```
-$ java -jar T4-Compiladores-1.0-SNAPSHOT-jar-with-dependencies.jar 
+$ java -jar T4-Compiladores-1.0-SNAPSHOT-jar-with-dependencies.jar /home/nathan/ufscar/T4-COMPILADORES/casos_teste/lexico-sintatico/caso1.txt /home/nathan/ufscar/T4-COMPILADORES/modelo_receita.html
 ```
