@@ -61,8 +61,6 @@ Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_r
 
 - data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja especificado o compilador gera a receita com a data atual)**
 
-Diante disso,
-
 ---
 ## Como compilar
 
