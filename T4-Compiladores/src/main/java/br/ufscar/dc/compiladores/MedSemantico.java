@@ -28,7 +28,7 @@ public class MedSemantico extends GramaticaBaseVisitor<Void> {
     @Override
     public Void visitMedico(GramaticaParser.MedicoContext ctx){
         // Verificacao CRM
-        if(ctx.crmMedico().NUM_INT().toString().length() > 10 || ctx.crmMedico().NUM_INT().toString().length() < 2){
+        if(ctx.crmMedico().NUM_INT().toString().length() > 10){
             errosSemanticos.add(String.format("Linha %d: %s" ,ctx.crmMedico().getStart().getLine(), "CRM invalido - numero de digitos deve ser entre 4 e 10\n"));
         }
         // Verificacao do telefone
