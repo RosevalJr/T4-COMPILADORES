@@ -16,12 +16,14 @@ que efetua as seguintes checagens:
 * Existem campos que possuem um limite maximo e minimo de caracteres;
 * Existem campos que necessitam de uma formatação (máscara) específica (telefone_medico).
 
+---
 ## Dependências
 
 * ANTLR 4.7.1
 * Maven 8
 * JDK 11.11.11
 
+---
 ## Como Utilizar a Linguagem
 
 Essa linguagem foi produzida com o intuito de facilitar a geração de receitas médicas online. O usuário da linguagem deve produzir um arquivo .txt seguindo as regras especificadas pela gramática produzida, inserindo as informações que irão aparecer na receita. Diante disso, deve então ser seguido um modelo para a produção deste arquivo de entrada.
@@ -36,7 +38,7 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 - cidade_medico : Qualquer cadeia de caracteres
 - estado_medico : Qualquer cadeia de caracteres
 - telefone_medico : **Seguir a máscara (00 0000-0000)**
-- crm_medico: : **1 a 10 digitos numéricos**
+- crm_medico: : **até 10 digitos numéricos**
 
 - nome_paciente : Qualquer cadeia de caracteres
 - rua_paciente : Qualquer cadeia de caracteres
@@ -52,13 +54,14 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 - prescricao_horas : Qualquer numero inteiro
 - prescricao_dias : Qualquer numero inteiro
 
-recomendacao: Qualquer cadeia de caracteres
+- recomendacao: Qualquer cadeia de caracteres com até 200 caracteres
 
-assinatura: Qualquer cadeia de caracteres
+- assinatura: Qualquer cadeia de caracteres com até 90 caracteres
 
 data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data atual)**
 
-Diante disso, 
+Diante disso,
+
 ---
 ## Como compilar
 
