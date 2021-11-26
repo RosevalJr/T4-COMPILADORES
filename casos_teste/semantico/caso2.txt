@@ -23,6 +23,8 @@ prescricao_qtde : 1
 prescricao_horas : 24
 prescricao_dias : 5
 
+|| 
+
 nome_remedio : "Dipirona"
 dosagem : "200 mg"
 numero_comprimidos : 10
