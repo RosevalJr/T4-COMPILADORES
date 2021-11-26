@@ -91,11 +91,11 @@ estadoPaciente: 'estado_paciente' DELIM CADEIA;
 // (mascara) e restricoes de tamanho)
 nomeRemedio: 'nome_remedio' DELIM CADEIA;
 dosagem: 'dosagem' DELIM CADEIA;
-numeroComprimidos: 'numero_comprimidos' DELIM CADEIA;
-numeroCaixas: 'numero_caixas' DELIM CADEIA;  
-prescricaoQtde: 'prescricao_qtde' DELIM CADEIA;
-prescricaoHoras: 'prescricao_horas' DELIM CADEIA;
-prescricaoDias: 'prescricao_dias' DELIM CADEIA;
+numeroComprimidos: 'numero_comprimidos' DELIM NUM_INT;
+numeroCaixas: 'numero_caixas' DELIM NUM_INT;  
+prescricaoQtde: 'prescricao_qtde' DELIM NUM_INT;
+prescricaoHoras: 'prescricao_horas' DELIM NUM_INT;
+prescricaoDias: 'prescricao_dias' DELIM NUM_INT;
 
 // Definindo campos da recomendacao... (Semanticamente é qualquer coisa, havendo
 // apenas uma restrição de numero de caracteres).
