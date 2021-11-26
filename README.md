@@ -58,7 +58,7 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 
 - assinatura: Qualquer cadeia de caracteres com até 90 caracteres
 
-data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data atual)**
+- data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data atual)**
 
 Diante disso,
 
