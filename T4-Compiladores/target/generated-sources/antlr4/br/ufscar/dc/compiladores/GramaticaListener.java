@@ -1,4 +1,4 @@
-// Generated from br/ufscar/dc/compiladores/Gramatica.g4 by ANTLR 4.7.2
+// Generated from br\u005Cufscar\dc\compiladores\Gramatica.g4 by ANTLR 4.7.2
 package br.ufscar.dc.compiladores;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 

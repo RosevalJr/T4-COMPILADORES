@@ -59,6 +59,11 @@
             <version>4.7.2</version>
             <classifier>complete</classifier>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+         </dependency>
     </dependencies>
     <name>T4-Compiladores</name>
 </project>

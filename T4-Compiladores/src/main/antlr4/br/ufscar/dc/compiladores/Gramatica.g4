@@ -49,7 +49,7 @@ SEPARADOR: '||';
 
 // Define a estrutura da receita
 receita: 'inicio_receita' medico paciente remedios recomendacoes
-assinatura ?(data) 'fim_receita';
+assinatura data? 'fim_receita';
 
 // Informacoes do medico
 medico: nomeMedico ruaMedico numeroMedico bairroMedico cidadeMedico estadoMedico

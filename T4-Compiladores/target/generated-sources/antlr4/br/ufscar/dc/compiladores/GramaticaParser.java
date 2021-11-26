@@ -1,4 +1,4 @@
-// Generated from br/ufscar/dc/compiladores/Gramatica.g4 by ANTLR 4.7.2
+// Generated from br\u005Cufscar\dc\compiladores\Gramatica.g4 by ANTLR 4.7.2
 package br.ufscar.dc.compiladores;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -130,11 +130,11 @@ public class GramaticaParser extends Parser {
 		public RecomendacoesContext recomendacoes() {
 			return getRuleContext(RecomendacoesContext.class,0);
 		}
-		public DataContext data() {
-			return getRuleContext(DataContext.class,0);
-		}
 		public AssinaturaContext assinatura() {
 			return getRuleContext(AssinaturaContext.class,0);
+		}
+		public DataContext data() {
+			return getRuleContext(DataContext.class,0);
 		}
 		public ReceitaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -172,20 +172,18 @@ public class GramaticaParser extends Parser {
 			remedios();
 			setState(62);
 			recomendacoes();
-			setState(64);
+			setState(63);
+			assinatura();
+			setState(65);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==CAMPO_ASSINATURA) {
+			if (_la==CAMPO_DATA) {
 				{
-				setState(63);
-				assinatura();
+				setState(64);
+				data();
 				}
 			}
 
-			{
-			setState(66);
-			data();
-			}
 			setState(67);
 			match(T__1);
 			}
@@ -1644,7 +1642,7 @@ public class GramaticaParser extends Parser {
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
 		"\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36\3\2\3\2\3\2\3\2\3\2"+
-		"\3\2\5\2C\n\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4"+
+		"\3\2\3\2\5\2D\n\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4"+
 		"\3\4\3\4\3\4\3\4\3\5\3\5\3\5\7\5Z\n\5\f\5\16\5]\13\5\3\6\3\6\3\6\3\6\3"+
 		"\6\3\6\3\6\3\6\3\7\3\7\3\7\7\7j\n\7\f\7\16\7m\13\7\3\b\3\b\3\b\3\b\3\t"+
 		"\3\t\3\t\3\t\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\r\3"+
@@ -1660,8 +1658,8 @@ public class GramaticaParser extends Parser {
 		"\2 \u0092\3\2\2\2\"\u0096\3\2\2\2$\u009a\3\2\2\2&\u009e\3\2\2\2(\u00a2"+
 		"\3\2\2\2*\u00a6\3\2\2\2,\u00aa\3\2\2\2.\u00ae\3\2\2\2\60\u00b2\3\2\2\2"+
 		"\62\u00b6\3\2\2\2\64\u00ba\3\2\2\2\66\u00be\3\2\2\28\u00c2\3\2\2\2:\u00c6"+
-		"\3\2\2\2<=\7\3\2\2=>\5\4\3\2>?\5\6\4\2?@\5\b\5\2@B\5\f\7\2AC\58\35\2B"+
-		"A\3\2\2\2BC\3\2\2\2CD\3\2\2\2DE\5:\36\2EF\7\4\2\2F\3\3\2\2\2GH\5\16\b"+
+		"\3\2\2\2<=\7\3\2\2=>\5\4\3\2>?\5\6\4\2?@\5\b\5\2@A\5\f\7\2AC\58\35\2B"+
+		"D\5:\36\2CB\3\2\2\2CD\3\2\2\2DE\3\2\2\2EF\7\4\2\2F\3\3\2\2\2GH\5\16\b"+
 		"\2HI\5\20\t\2IJ\5\22\n\2JK\5\24\13\2KL\5\26\f\2LM\5\30\r\2MN\5\32\16\2"+
 		"NO\5\34\17\2O\5\3\2\2\2PQ\5\36\20\2QR\5 \21\2RS\5\"\22\2ST\5$\23\2TU\5"+
 		"&\24\2U\7\3\2\2\2V[\5\n\6\2WX\7%\2\2XZ\5\n\6\2YW\3\2\2\2Z]\3\2\2\2[Y\3"+
@@ -1690,7 +1688,7 @@ public class GramaticaParser extends Parser {
 		"\65\3\2\2\2\u00be\u00bf\7\35\2\2\u00bf\u00c0\7$\2\2\u00c0\u00c1\7!\2\2"+
 		"\u00c1\67\3\2\2\2\u00c2\u00c3\7\36\2\2\u00c3\u00c4\7$\2\2\u00c4\u00c5"+
 		"\7!\2\2\u00c59\3\2\2\2\u00c6\u00c7\7\37\2\2\u00c7\u00c8\7$\2\2\u00c8\u00c9"+
-		"\7!\2\2\u00c9;\3\2\2\2\5B[k";
+		"\7!\2\2\u00c9;\3\2\2\2\5C[k";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
