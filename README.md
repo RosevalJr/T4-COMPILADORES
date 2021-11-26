@@ -36,7 +36,7 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 - cidade_medico : Qualquer cadeia de caracteres
 - estado_medico : Qualquer cadeia de caracteres
 - telefone_medico : **Seguir a máscara (00 0000-0000)**
-- crm_medico: : **4 a 10 digitos numéricos**
+- crm_medico: : **1 a 10 digitos numéricos**
 
 - nome_paciente : Qualquer cadeia de caracteres
 - rua_paciente : Qualquer cadeia de caracteres
@@ -45,7 +45,7 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 - estado_paciente : Qualquer cadeia de caracteres
 
 - nome_remedio : Qualquer cadeia de caracteres **(nome de remédio não pode repetir)**
-- dosagem : "500 mg"
+- dosagem : Qualquer cadeia de caracteres
 - numero_comprimidos : Qualquer numero inteiro
 - numero_caixas : Qualquer numero inteiro
 - prescricao_qtde : Qualquer numero inteiro
@@ -56,7 +56,7 @@ recomendacao: Qualquer cadeia de caracteres
 
 assinatura: Qualquer cadeia de caracteres
 
-data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data aatual)**
+data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data atual)**
 
 Diante disso, 
 ---
