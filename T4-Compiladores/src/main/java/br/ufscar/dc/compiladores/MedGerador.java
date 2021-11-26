@@ -19,36 +19,43 @@ public class MedGerador extends GramaticaBaseVisitor<Void> {
     // Append as informacoes de style do html da receita, no buffer de saida
     private void setStyle(){
         saida.append("<style>\n" +
-            "    #anverso {\n" +
-            "        width: 60%;\n" +
-            "        height: 80%;\n" +
-            "        margin: 50px 100px 50px 100px;\n" +
-            "        border-style: double;\n" +
-            "        border-color: #00ace6;\n" +
-            "        border-width: 7px;\n" +
-            "        border-radius: 25px;\n" +
-            "        font-size: 20px;\n" +
-            "        padding: 10px 20px 10px 20px;\n" +
-            "    }\n" +
-            "    body {\n" +
-            "        color: #002266;\n" +
-            "        background-color: #d9d9d9;\n" +
-            "    }\n" +
-            "\n" +
-            "    #medico, #paciente, #remedio, #data {\n" +
-            "        margin: 0 0 70px 0;\n" +
-            "    }\n" +
-            "    #logo{\n" +
-            "        width: 50px;\n" +
-            "        height:50px;\n" +
-            "    }\n" +
-            "\n" +
-            "    hr{\n" +
-            "        width: 50%;\n" +
-            "        color: #002266;\n" +
-            "    }\n" +
-            "\n" +
-            "</style>\n");
+        "    #anverso {\n" +
+        "        width: 60%;\n" +
+        "        height: 80%;\n" +
+        "        margin: 50px 100px 50px 100px;\n" +
+        "        border-style: double;\n" +
+        "        border-color: #00ace6;\n" +
+        "        border-width: 7px;\n" +
+        "        border-radius: 25px;\n" +
+        "        font-size: 20px;\n" +
+        "        padding: 10px 20px 10px 20px;\n" +
+        "    }\n" +
+        "    body {\n" +
+        "        color: #002266;\n" +
+        "        background-color: #d9d9d9;\n" +
+        "    }\n" +
+        "\n" +
+        "    #medico, #paciente, #remedio, #recomendacoes, #data {\n" +
+        "        margin: 0 0 70px 0;\n" +
+        "    }\n" +
+        "    #logo{\n" +
+        "        width: 50px;\n" +
+        "        height:50px;\n" +
+        "    }\n" +
+        "\n" +
+        "    hr{\n" +
+        "        width: 50%;\n" +
+        "        color: #002266;\n" +
+        "    }\n" +
+        "    .assinatura {\n" +
+        "        height: 70px;\n" +
+        "    }\n" +
+        "\n" +
+        "    #recomendacoes {\n" +
+        "        font-size: 17px;\n" +
+        "    }\n" +
+        "\n" +
+        "</style>");
     }
     
     // Append as informacoes da imagem a ser colocada na receita.
@@ -78,6 +85,9 @@ public class MedGerador extends GramaticaBaseVisitor<Void> {
         // Visita o node do(s) remedio(s).
         ctx.remedios().remedio().forEach(rem -> visitRemedio(rem));
         
+        // Visita o node das recomendações.
+        ctx.recomendacoes().recomendacao().forEach(rec -> visitRecomendacao(rec));
+        
         // Insercao de data e assinatura centralizadas.
         saida.append("<center>\n");
         
@@ -88,12 +98,6 @@ public class MedGerador extends GramaticaBaseVisitor<Void> {
         saida.append("</center>\n"); // Fecha o center da data e assinatura.
         
         saida.append("</div>\n"); // Fecha o div do anverso da receita.
-                
-        // Inicia o verso da receita.
-        saida.append("<div id=\"verso\">\n");
-        
-        
-        saida.append("</div>\n"); // Fecha o div do verso da receita.
         
         return null;  // Nao visita os filhos.
     }
@@ -155,11 +159,23 @@ public class MedGerador extends GramaticaBaseVisitor<Void> {
     }
     
     @Override
+    public Void visitRecomendacao(GramaticaParser.RecomendacaoContext ctx){
+        
+        saida.append("    <div id=\"recomendacoes\">\n");
+        
+        // Insere as informacoes de recomendacao
+        saida.append(ctx.CADEIA().getText().replace("\"", ""));
+        
+        saida.append("    </div>\n");
+        return null;
+    }
+    
+    @Override
     public Void visitData(GramaticaParser.DataContext ctx){
         
         saida.append("        <div id=\"data\">\n");
         if(ctx == null){
-            DateTimeFormatter data = DateTimeFormatter.ofPattern("yyyy/MM/dd");  
+            DateTimeFormatter data = DateTimeFormatter.ofPattern("dd/MM/yyyy");  
             LocalDateTime agora = LocalDateTime.now();  
             saida.append("            " + data.format(agora));
         }
