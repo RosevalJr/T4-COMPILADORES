@@ -34,39 +34,42 @@ Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_r
 ### Informações Médico
 - nome_medico : Qualquer cadeia de caracteres
 - rua_medico : Qualquer cadeia de caracteres
-- numero_medico : Qualquer numero inteiro
+- numero_medico : Qualquer número inteiro
 - bairro_medico : Qualquer cadeia de caracteres
 - cidade_medico : Qualquer cadeia de caracteres
 - estado_medico : Qualquer cadeia de caracteres
 - telefone_medico : **Seguir a máscara (00 0000-0000)**
-- crm_medico: : **No máximo 10 digitos numéricos**
+- crm_medico: : **No máximo 10 dígitos numéricos**
 
 ### Informações Paciente
 - nome_paciente : Qualquer cadeia de caracteres
 - rua_paciente : Qualquer cadeia de caracteres
-- numero_paciente : Qualquer numero inteiro
+- numero_paciente : Qualquer número inteiro
 - cidade_paciente : Qualquer cadeia de caracteres
 - estado_paciente : Qualquer cadeia de caracteres
 
 ### Informações Remédio
-No caso do remedio, a linguagem permite a inserção de 1 ou mais remédios. Caso seja desejado inserir mais de 1 remédio, o usuário da linguagem deve inserir outro bloco de informações de remedio por completo, separando cada um dos blocos pelo separado ``||``.
+No caso do remedio, a linguagem permite a inserção de 1 ou mais remédios. Caso seja desejado inserir mais de 1 remédio, o usuário da linguagem deve inserir outro bloco de informações de remedio por completo, separando cada um dos blocos pelo separador ``||``.
 
 - nome_remedio : Qualquer cadeia de caracteres **(nome de remédio não pode repetir)**
 - dosagem : Qualquer cadeia de caracteres
-- numero_comprimidos : Qualquer numero inteiro
-- numero_caixas : Qualquer numero inteiro
-- prescricao_qtde : Qualquer numero inteiro
-- prescricao_horas : Qualquer numero inteiro
-- prescricao_dias : Qualquer numero inteiro
+- numero_comprimidos : Qualquer número inteiro
+- numero_caixas : Qualquer número inteiro
+- prescricao_qtde : Qualquer número inteiro
+- prescricao_horas : Qualquer número inteiro
+- prescricao_dias : Qualquer número inteiro
 
-### Informações Adicionais
+### Informações de Recomendação
+Neste caso é possível especificar mais de um campo de recomendação. Para indicar mais de uma recomendação na receita, o usuário da linguagem deve inserir outro campo de recomendação, separando cada um dos campos pelo separador ``||``.
+
 - recomendacao: **Qualquer cadeia de caracteres com até 200 caracteres**
 
+### Informações Adicionais
 - assinatura: **Qualquer cadeia de caracteres com até 90 caracteres**
 
 - data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja especificado o compilador gera a receita com a data atual)**
 
-Diante disso, aplicando as regras especificadas neste documento para a utilização da linguagem, é possivel produzir uma receita online em forma de HTML a partir de um arquivo TXT. Um exemplo de um código funcional desta linguagem, que gera uma receita valida é o seguinte:
+Diante disso, aplicando as regras especificadas neste documento para a utilização da linguagem, é possível produzir uma receita online em forma de HTML a partir de um arquivo TXT. Um exemplo de um código funcional desta linguagem, que gera uma receita válida é o seguinte:
 
 ```
 inicio_receita
@@ -95,11 +98,26 @@ prescricao_qtde : 1
 prescricao_horas : 24
 prescricao_dias : 10
 
-recomendacao: "Ficar de repouso"
+||
+
+nome_remedio : "Paracetamol"
+dosagem : "500 mg"
+numero_comprimidos : 20
+numero_caixas : 2
+prescricao_qtde : 1
+prescricao_horas : 24
+prescricao_dias : 20
+
+recomendacao: "Ficar de repouso."
+
+||
+
+recomendacao: "Indicado que o paciente beba muita água."
 
 assinatura: "/home/pedro/assinatura.png"
 
 data: "25 de novembro de 2019"
+
 fim_receita
 ```
 ---
@@ -117,4 +135,3 @@ Importante destacar que, o ``[arquivo-de-entrada]`` deve ser um arquivo texto e 
 ```
 $ java -jar T4-Compiladores-1.0-SNAPSHOT-jar-with-dependencies.jar /home/nathan/ufscar/T4-COMPILADORES/casos_teste/lexico-sintatico/caso1.txt /home/nathan/ufscar/T4-COMPILADORES/modelo_receita.html
 ```
-
