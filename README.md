@@ -16,7 +16,7 @@ que efetua as seguintes checagens:
 * Existem campos que possuem um limite máximo e mínimo de caracteres;
 * Existem campos que necessitam de uma formatação (máscara) específica (telefone_medico).
 
-A apresentação da linguagem está presente [neste vídeo] (https://drive.google.com/file/d/1enju21nBgFlUNh3R0kUcxoDTNP8kJn2f/view?usp=sharing).
+A apresentação da linguagem está presente [neste vídeo](https://drive.google.com/file/d/1enju21nBgFlUNh3R0kUcxoDTNP8kJn2f/view?usp=sharing).
 
 ---
 ## Dependências
