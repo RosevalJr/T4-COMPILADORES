@@ -15,7 +15,7 @@ numero_paciente : 1430
 cidade_paciente : "Belo Horizonte"
 estado_paciente : "Minas Gerais"
 
-nome_remedio : "Amoxilina"
+nome_remedio : "Paracetamol"
 dosagem : "500 mg"
 numero_comprimidos : 10
 numero_caixas : 1
@@ -25,7 +25,7 @@ prescricao_dias : 10
 
 ||
 
-nome_remedio : "Paracetamol"
+nome_remedio : "Amoxicilina"
 dosagem : "500 mg"
 numero_comprimidos : 10
 numero_caixas : 1
