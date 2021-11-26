@@ -31,7 +31,7 @@ Essa linguagem foi produzida com o intuito de facilitar a geração de receitas 
 
 Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_receita`` e ``fim_receita``. Todas as informações da receita serão adicionadas entre estes dois identificadores. Depois, para cada um dos campos será necessário inserir ``"nome do campo" : "valor"``, seguindo a ordem especificada pela gramática. Também foram especificados o que devem ser inserido em cada campo, seguindo algumas regras definida pelos autores da linguagem:
 
-
+### Informações Médico
 - nome_medico : Qualquer cadeia de caracteres
 - rua_medico : Qualquer cadeia de caracteres
 - numero_medico : Qualquer numero inteiro
@@ -41,11 +41,15 @@ Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_r
 - telefone_medico : **Seguir a máscara (00 0000-0000)**
 - crm_medico: : **No máximo 10 digitos numéricos**
 
+### Informações Paciente
 - nome_paciente : Qualquer cadeia de caracteres
 - rua_paciente : Qualquer cadeia de caracteres
 - numero_paciente : Qualquer numero inteiro
 - cidade_paciente : Qualquer cadeia de caracteres
 - estado_paciente : Qualquer cadeia de caracteres
+
+### Informações Remédio
+No caso do remedio, a linguagem permite a inserção de 1 ou mais remédios. Caso seja desejado inserir mais de 1 remédio, o usuário da linguagem deve inserir outro bloco de informações de remedio por completo, separando cada um dos blocos pelo separado ``||``.
 
 - nome_remedio : Qualquer cadeia de caracteres **(nome de remédio não pode repetir)**
 - dosagem : Qualquer cadeia de caracteres
@@ -55,14 +59,51 @@ Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_r
 - prescricao_horas : Qualquer numero inteiro
 - prescricao_dias : Qualquer numero inteiro
 
+### Informações Adicionais
 - recomendacao: **Qualquer cadeia de caracteres com até 200 caracteres**
 
 - assinatura: **Qualquer cadeia de caracteres com até 90 caracteres**
 
 - data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja especificado o compilador gera a receita com a data atual)**
 
+Diante disso, aplicando as regras especificadas neste documento para a utilização da linguagem, é possivel produzir uma receita online em forma de HTML a partir de um arquivo TXT. Um exemplo de um código funcional desta linguagem, que gera uma receita valida é o seguinte:
+
+```
+inicio_receita
+
+nome_medico : "Pedro da silva"
+rua_medico : "Avenida Afonso Pena"
+numero_medico : 600
+bairro_medico : "Boa Viagem"
+cidade_medico : "Belo Horizonte"
+estado_medico : "Minas Gerais"
+telefone_medico : "31 9999-9999"
+crm_medico: 3000
+
+nome_paciente : "Raquel Queiroz"
+rua_paciente : "Rua Rio Grande do Norte"
+numero_paciente : 1430
+cidade_paciente : "Belo Horizonte"
+estado_paciente : "Minas Gerais"
+
+
+nome_remedio : "Amoxilina"
+dosagem : "500 mg"
+numero_comprimidos : 10
+numero_caixas : 200
+prescricao_qtde : 1
+prescricao_horas : 24
+prescricao_dias : 10
+
+recomendacao: "Ficar de repouso"
+
+assinatura: "/home/pedro/assinatura.png"
+
+data: "25 de novembro de 2019"
+fim_receita
+```
 ---
-## Como compilar
+## Como Compilar
 
 Para efetuar a compilação de um arquivo nessa linguagem é necessário executar o comando Build and Clean presente na IDE Netbeans.
 Após isso, deverão ser executados os seguintes comandos na raiz do projeto:
