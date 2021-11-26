@@ -52,9 +52,9 @@ Inicialmente o usuário deve inciar o arquivo com os identificadores ``inicio_re
 - prescricao_horas : Qualquer numero inteiro
 - prescricao_dias : Qualquer numero inteiro
 
-recomendacao: Qualquer cadeia de caracteres
+recomendacao: Qualquer cadeia de caracteres com até 200 caracteres
 
-assinatura: Qualquer cadeia de caracteres
+assinatura: Qualquer cadeia de caracteres com até 90 caracteres
 
 data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja espcificado o compilador gera a receita com a data atual)**
 
