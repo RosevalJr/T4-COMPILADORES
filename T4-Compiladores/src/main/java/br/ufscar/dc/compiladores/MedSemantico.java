@@ -53,6 +53,23 @@ public class MedSemantico extends GramaticaBaseVisitor<Void> {
                
         return super.visitMedico(ctx);
     }
+    
+    @Override
+    public Void visitRecomendacao(GramaticaParser.RecomendacaoContext ctx){
+        if(ctx.CADEIA().toString().length() > 200)
+            errosSemanticos.add(String.format("Linha %d: %s" ,ctx.getStart().getLine(), "O campo recomendacao tem limite de 200 caracteres\n"));    
+        
+        return super.visitRecomendacao(ctx);
+    }
+    
+    @Override
+    public Void visitAssinatura(GramaticaParser.AssinaturaContext ctx){
+        if(ctx.CADEIA().toString().length() > 90)
+            errosSemanticos.add(String.format("Linha %d: %s" ,ctx.getStart().getLine(), "O campo assinatura tem limite de 90 caracteres\n"));    
+     
+        return super.visitAssinatura(ctx);
+    }
  
+    
     
 }
