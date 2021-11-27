@@ -1,0 +1,51 @@
+inicio_receita
+
+nome_medico : "Pedro da silva"
+rua_medico : "Avenida Afonso Pena"
+numero_medico : 600
+bairro_medico : "Boa Viagem"
+cidade_medico : "Belo Horizonte"
+estado_medico : "Minas Gerais"
+telefone_medico : "31 9999-9999"
+crm_medico: 3000
+
+nome_paciente : "Raquel Queiroz"
+rua_paciente : "Rua Rio Grande do Norte"
+numero_paciente : 1430
+cidade_paciente : "Belo Horizonte"
+estado_paciente : "Minas Gerais"
+
+nome_remedio : "Paracetamol"
+dosagem : "500 mg"
+numero_comprimidos : 10
+numero_caixas : 1
+prescricao_qtde : 1
+prescricao_horas : 24
+prescricao_dias : 10
+
+||
+
+nome_remedio : "Amoxicilina"
+dosagem : "500 mg"
+numero_comprimidos : 10
+numero_caixas : 1
+prescricao_qtde : 1
+prescricao_horas : 24
+prescricao_dias : 10
+
+||
+
+nome_remedio : "Paracetamol"
+dosagem : "500 mg"
+numero_comprimidos : 10
+numero_caixas : 1
+prescricao_qtde : 1
+prescricao_horas : 24
+prescricao_dias : 10
+
+recomendacao: "Ficar de repouso"
+
+assinatura: "/home/pedro/assinatura.png"
+
+data: "25 de novembro de 2019"
+fim_receita

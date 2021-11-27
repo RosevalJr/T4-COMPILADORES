@@ -1,0 +1,41 @@
+inicio_receita
+
+nome_medico : "João Barbosa"
+rua_medico : "Avenida Rodrigo Kapp"
+numero_medico : 200
+bairro_medico : "Bela Vista"
+cidade_medico : "Rio de Janeiro"
+estado_medico : "Rio de Janeiro"
+telefone_medico : "21 3872-1222"
+crm_medico: 45200
+
+nome_paciente : "Raquel Queiroz"
+rua_paciente : "Rua Rio Grande do Norte"
+numero_paciente : 1430
+cidade_paciente : "Belo Horizonte"
+estado_paciente : "Minas Gerais"
+
+nome_remedio : "Amoxicilina"
+dosagem : "200 mg"
+numero_comprimidos : 5
+numero_caixas : 1
+prescricao_qtde : 1
+prescricao_horas : 24
+prescricao_dias : 5
+
+|| 
+
+nome_remedio : "Dipirona"
+dosagem : "200 mg"
+numero_comprimidos : 10
+numero_caixas : 2
+prescricao_qtde : 1
+prescricao_horas : 6
+prescricao_dias : 3
+
+recomendacao: "Hidratar-se muito."
+
+assinatura: "/home/joao/assinatura.png"
+
+data: "26/11/2021"
+fim_receita

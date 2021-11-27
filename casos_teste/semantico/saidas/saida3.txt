@@ -1,0 +1,2 @@
+Linha 9: Telefone do medico invalido. Apenas digitos e separadores sao permitidos
+Fim da compilacao

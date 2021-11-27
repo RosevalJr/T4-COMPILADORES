@@ -1,2 +1,0 @@
-Linha 21: erro sintatico proximo a prescricao_qtde
-Fim da compilacao

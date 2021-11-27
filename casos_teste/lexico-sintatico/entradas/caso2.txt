@@ -1,0 +1,18 @@
+inicio_receita
+
+nome_medico : "Pedro da silva"
+rua_medico : "Avenida Afonso Pena"
+numero_medico : 600
+bairro_medico : "Boa Viagem"
+cidade_medico : "Belo Horizonte"
+estado_medico : "Minas Gerais"
+telefone_medico : "31 9999-9999"
+crm_medico: 3000
+
+nome_paciente : "Raquel Queiroz"
+rua_paciente : "Rua Rio Grande do Norte"
+numero_paciente : 1430
+cidade_paciente : "Belo Horizonte"
+estado_paciente : "Minas Gerais"
+
+fim_receita
