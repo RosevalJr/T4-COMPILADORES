@@ -29,9 +29,9 @@ A apresentação da linguagem está presente [neste vídeo](https://drive.google
 ---
 ## Como Utilizar a Linguagem
 
-Essa linguagem foi produzida com o intuito de facilitar a geração de receitas médicas online. O usuário da linguagem deve produzir um arquivo .txt seguindo as regras especificadas pela gramática produzida, inserindo as informações que irão aparecer na receita. Diante disso, deve então ser seguido um modelo para a produção deste arquivo de entrada.
+Essa linguagem foi produzida com o intuito de facilitar a geração de receitas médicas digitais. O usuário da linguagem deve produzir um arquivo ``TXT`` seguindo as regras especificadas pela gramática produzida, inserindo as informações que irão aparecer na receita. Diante disso, deve então ser seguido um modelo para a produção deste arquivo de entrada.
 
-Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_receita`` e ``fim_receita``. Todas as informações da receita serão adicionadas entre estes dois identificadores. Depois, para cada um dos campos será necessário inserir ``"nome do campo" : "valor"``, seguindo a ordem especificada pela gramática. Também foram especificados o que devem ser inserido em cada campo, seguindo algumas regras definida pelos autores da linguagem:
+Inicialmente, o usuário deve iniciar o arquivo de entrada com os identificadores ``inicio_receita`` e ``fim_receita``. Todas as informações da receita serão adicionadas entre estes dois identificadores. Depois, para cada um dos campos será necessário inserir ``"nome do campo" : "valor"``, seguindo a ordem especificada pela gramática. Também foi especificado o que deve ser inserido em cada campo, seguindo algumas regras definidas pelos autores da linguagem:
 
 ### Informações Médico
 - nome_medico : Qualquer cadeia de caracteres
@@ -51,7 +51,7 @@ Inicialmente o usuário deve iniciar o arquivo com os identificadores ``inicio_r
 - estado_paciente : Qualquer cadeia de caracteres
 
 ### Informações Remédio
-No caso do remedio, a linguagem permite a inserção de 1 ou mais remédios. Caso seja desejado inserir mais de 1 remédio, o usuário da linguagem deve inserir outro bloco de informações de remedio por completo, separando cada um dos blocos pelo separador ``||``.
+No caso do remédio, a linguagem permite a inserção de 1 ou mais remédios. Caso seja desejado inserir mais de 1 remédio, o usuário da linguagem deve inserir outro bloco de informações de remédio por completo, separando cada um dos blocos pelo separador ``||``.
 
 - nome_remedio : Qualquer cadeia de caracteres **(nome de remédio não pode repetir)**
 - dosagem : Qualquer cadeia de caracteres
@@ -71,7 +71,7 @@ Neste caso é possível especificar mais de um campo de recomendação. Para ind
 
 - data: Qualquer cadeia de caracteres **(esse campo é opcional, caso não seja especificado o compilador gera a receita com a data atual)**
 
-Diante disso, aplicando as regras especificadas neste documento para a utilização da linguagem, é possível produzir uma receita online em forma de HTML a partir de um arquivo TXT. Um exemplo de um código funcional desta linguagem, que gera uma receita válida é o seguinte:
+Diante disso, aplicando as regras especificadas neste documento para a utilização da linguagem, é possível produzir uma receita digital em ``HTML`` a partir de um arquivo ``TXT``. Um exemplo de um código funcional desta linguagem, que gera uma receita válida, pode ser observado a seguir:
 
 ```
 inicio_receita
@@ -132,7 +132,7 @@ $ cd T4-Compiladores/target/
 $ java -jar T4-Compiladores-1.0-SNAPSHOT-jar-with-dependencies.jar [arquivo-de-entrada] [arquivo-de-saida]
 ```
 
-Importante destacar que, o ``[arquivo-de-entrada]`` deve ser um arquivo texto e o ``[arquivo-de-saida]`` deve ser especificado com a extensão ``.html`` para que a receita possa ser visualizada dentro do navegador, abrindo o arquivo. Além disso, tanto ``[arquivo-de-entrada]``, quanto ``[arquivo-de-saida]`` devem ser caminhos absolutos. Um exemplo de execução do compilador seria através do comando:
+Importante destacar que, o ``[arquivo-de-entrada]`` deve ser um arquivo texto e o ``[arquivo-de-saida]`` deve ser especificado com a extensão ``.html`` para que a receita possa ser visualizada dentro do navegador. Além disso, tanto ``[arquivo-de-entrada]``, quanto ``[arquivo-de-saida]`` devem ser caminhos absolutos. Um exemplo de execução do compilador seria através do comando:
 
 ```
 $ java -jar T4-Compiladores-1.0-SNAPSHOT-jar-with-dependencies.jar /home/nathan/ufscar/T4-COMPILADORES/casos_teste/lexico-sintatico/caso1.txt /home/nathan/ufscar/T4-COMPILADORES/modelo_receita.html
